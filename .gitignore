@@ -1,3 +1,7 @@
 index_cache/
 rdp_*
 .DS_Store
+index_*
+filtered_reads/
+figures/
+reads/
