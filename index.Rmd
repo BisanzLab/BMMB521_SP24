@@ -456,7 +456,7 @@ summary(fit)
 
 # Beta Diversity
 
-Beta diversity refers to a way of measuring similarity between samples. These are often called distances or dissimilarities. Conceptually it is easy to measure the distance between two physical points, but how do we measure the distance between two compositions? There is an entire universe of metrics used for this purpose, but today we will use a newer metric called Aitchison distance, also called CLR Euclidean. This metric comes from the field of compositional data analysis (CoDA) and deals with a number of shortcomings of more traditional metrics were developed for macro-ecology. Read more [here][CoDA](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5695134/).
+Beta diversity refers to a way of measuring similarity between samples. These are often called distances or dissimilarities. Conceptually it is easy to measure the distance between two physical points, but how do we measure the distance between two compositions? There is an entire universe of metrics used for this purpose, but today we will use a newer metric called Aitchison distance, also called CLR Euclidean. This metric comes from the field of compositional data analysis (CoDA) and deals with a number of shortcomings of more traditional metrics were developed for macro-ecology. Read more [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5695134/).
 
 
 ```{r}
@@ -688,7 +688,9 @@ asv_table %>%
   geom_jitter(height=0, width=1, shape=21) +
   theme_q2r() +
   scale_fill_manual(values=c("cornflowerblue","indianred")) +
-  theme(legend.position="none")
+  theme(legend.position="none") +
+  ylab("C. difficile abundance") +
+  xlab("Time (days)")
 ggsave("figures/ASV41.pdf", height=2, width=2)
 ```
 
